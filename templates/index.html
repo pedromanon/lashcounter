@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <h3>Eyes</h3>
+    <p>Left eye: {{left}}</p><p>Right eye: {{right}}</p>
+
+    <h3>Balance</h3>
+    {% if balance_eye == "None" %}
+    <p>Eyes are already balanced.</p>
+    {% else %}
+    <p>Add {{balance}} lashes to the {{balance_eye}} eye.</p>
+    {% endif %}
+
+    <h3>Finish</h3>
+    <p>Add {{both}} lashes to both eyes.</p>
+
+    <h3>Extra</h3>
+    {% if extra > 0 %}
+    <p>Add {{extra}} lashes for the client to reach 60 lashes per eye. Add {{extra_individual}} per eye.</p>
+    {% else %}
+    <p> No extra lashes needed.</p>
+    {% endif %}
+
+{% endblock %}
